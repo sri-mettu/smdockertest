@@ -21,9 +21,9 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the compiled Selenium JAR file into the Docker image
-#COPY --from=build /app/target/smdockertest-0.0.1-SNAPSHOT.jar .
-COPY target/smdockertest-0.0.1-SNAPSHOT.jar /app/target/
-RUN chmod +r /app/target/smdockertest-0.0.1-SNAPSHOT.jar
+COPY --from=build /app/target/smdockertest-0.0.1-SNAPSHOT.jar .
+##COPY target/smdockertest-0.0.1-SNAPSHOT.jar /app/target/
+##RUN chmod +r /app/target/smdockertest-0.0.1-SNAPSHOT.jar
 
 # Specify the command to run your Selenium tests
 CMD ["java", "-jar", "smdockertest-0.0.1-SNAPSHOT.jar"]
