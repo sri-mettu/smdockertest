@@ -12,7 +12,7 @@ public class TestNGRunner {
 	public static void main(String[] args) {
 		//ExtentReports extent = new ExtentReports();
 		testNg = new TestNG();
-		testNg.setTestClasses(new Class[] {EscortManagementTest.class, StandAloneTest.class });
+		testNg.setTestClasses(new Class[] {LandingPageTest.class });
 		//testNg.addListener(extent);
 		testNg.run();
 	}

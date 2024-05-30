@@ -4,28 +4,15 @@
   <listeners>
     <listener class-name="sm.TestComponents.Listeners"/>
   </listeners>
-  <test thread-count="5" name="StandAloneTest(failed)">
+  <test thread-count="5" name="LandingPageTest(failed)">
     <classes>
-      <class name="sm.tests.StandAloneTest">
+      <class name="sm.tests.LandingPageTest">
         <methods>
+          <include name="pwdSignIn"/>
           <include name="quitBrowser"/>
-          <include name="mableHistory"/>
-          <include name="alarmHistory"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- sm.tests.StandAloneTest -->
+      </class> <!-- sm.tests.LandingPageTest -->
     </classes>
-  </test> <!-- StandAloneTest(failed) -->
-  <test thread-count="5" name="EscortManagementTest(failed)">
-    <classes>
-      <class name="sm.tests.EscortManagementTest">
-        <methods>
-          <include name="quitBrowser"/>
-          <include name="addEscortEvent"/>
-          <include name="deleteEscortEvent"/>
-          <include name="launchApplication"/>
-        </methods>
-      </class> <!-- sm.tests.EscortManagementTest -->
-    </classes>
-  </test> <!-- EscortManagementTest(failed) -->
+  </test> <!-- LandingPageTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

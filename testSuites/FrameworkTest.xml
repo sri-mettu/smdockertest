@@ -3,15 +3,10 @@
 <suite name="Suite">
 	<listeners>
 		<listener class-name="sm.TestComponents.Listeners"/>
-	</listeners>   
-  <test thread-count="5" name="StandAloneTest">
+	</listeners>     
+  <test thread-count="5" name="LandingPageTest">
     <classes>              
-      <class name="sm.tests.StandAloneTest"/>      
-    </classes>
-  </test> 
-  <test thread-count="5" name="EscortManagementTest">
-    <classes>              
-      <class name="sm.tests.EscortManagementTest"/>      
+      <class name="sm.tests.LandingPageTest"/>      
     </classes>
   </test> 
   <!-- Test -->

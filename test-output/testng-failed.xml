@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="sm.tests.EscortManagementTest">
+      <class name="sm.tests.LandingPageTest">
         <methods>
+          <include name="pwdSignIn"/>
           <include name="quitBrowser"/>
-          <include name="deleteEscortEvent"/>
           <include name="launchApplication"/>
         </methods>
-      </class> <!-- sm.tests.EscortManagementTest -->
+      </class> <!-- sm.tests.LandingPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -40,6 +40,15 @@ public class AbstractComponent {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
 		wait.until(ExpectedConditions.visibilityOf(findBy));
 	}
+	public void waitForWebElementTodisAppear(WebElement findBy) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		wait.until(ExpectedConditions.invisibilityOf(findBy));
+	}
+	public void waitForWebElementToclick(WebElement findBy) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		wait.until(ExpectedConditions.elementToBeClickable(findBy));
+	}
+	
 
 	public void maxbrowser() {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
