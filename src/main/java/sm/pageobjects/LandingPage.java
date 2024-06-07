@@ -37,7 +37,7 @@ public class LandingPage extends AbstractComponent {
 	WebElement email;
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement cotnue;
-	@FindBy(css = "p[class*='MuiTypography-root MuiTypography-p1 css-nt6tld']")
+	@FindBy(xpath = "(//p[contains(@class,'MuiTypography-root MuiTypography-p1')])[2]")
 	public WebElement error;
 	@FindBy(css = "button[class*='MuiTypography-root ']")
 	WebElement back;

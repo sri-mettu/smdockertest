@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-05-30T15:37:59 BST" name="Default suite" finished-at="2024-05-30T15:38:48 BST" duration-ms="48813">
+  <suite started-at="2024-06-06T16:14:00 BST" name="Default suite" finished-at="2024-06-06T16:14:05 BST" duration-ms="5198">
     <groups>
     </groups>
-    <test started-at="2024-05-30T15:37:59 BST" name="Default test" finished-at="2024-05-30T15:38:48 BST" duration-ms="48813">
+    <test started-at="2024-06-06T16:14:00 BST" name="Default test" finished-at="2024-06-06T16:14:05 BST" duration-ms="5198">
       <class name="sm.tests.LandingPageTest">
-        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sm.tests.LandingPageTest@1e6454ec]" started-at="2024-05-30T15:37:59 BST" name="launchApplication" finished-at="2024-05-30T15:38:07 BST" duration-ms="8120" status="PASS">
+        <test-method is-config="true" signature="launchApplication()[pri:0, instance:sm.tests.LandingPageTest@389b0789]" started-at="2024-06-06T16:14:00 BST" name="launchApplication" finished-at="2024-06-06T16:14:03 BST" duration-ms="3324" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchApplication -->
-        <test-method signature="pwdSignIn()[pri:0, instance:sm.tests.LandingPageTest@1e6454ec]" started-at="2024-05-30T15:38:07 BST" name="pwdSignIn" finished-at="2024-05-30T15:38:46 BST" duration-ms="39184" status="PASS">
+        <test-method signature="incorrectSignIn()[pri:0, instance:sm.tests.LandingPageTest@389b0789]" started-at="2024-06-06T16:14:03 BST" name="incorrectSignIn" finished-at="2024-06-06T16:14:04 BST" duration-ms="1101" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pwdSignIn -->
-        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:sm.tests.LandingPageTest@1e6454ec]" started-at="2024-05-30T15:38:46 BST" name="quitBrowser" finished-at="2024-05-30T15:38:48 BST" duration-ms="1471" status="PASS">
+        </test-method> <!-- incorrectSignIn -->
+        <test-method is-config="true" signature="quitBrowser()[pri:0, instance:sm.tests.LandingPageTest@389b0789]" started-at="2024-06-06T16:14:04 BST" name="quitBrowser" finished-at="2024-06-06T16:14:05 BST" duration-ms="725" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quitBrowser -->

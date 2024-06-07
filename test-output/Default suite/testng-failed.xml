@@ -5,8 +5,8 @@
     <classes>
       <class name="sm.tests.LandingPageTest">
         <methods>
-          <include name="pwdSignIn"/>
           <include name="quitBrowser"/>
+          <include name="incorrectSignIn"/>
           <include name="launchApplication"/>
         </methods>
       </class> <!-- sm.tests.LandingPageTest -->
