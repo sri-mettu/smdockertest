@@ -16,7 +16,7 @@ public class LandingPageTest extends baseTest{
 		//landingpage.getErrorMessage();
 		Assert.assertEquals("No account with login id harani.venkatesh@multitone.com", landingpage.getErrorMessage());
 		}
-	@Test(enabled=false)
+	@Test(enabled=true)
 	public void pwdSignIn() throws IOException, InterruptedException {			
 		landingpage.loginApplication();
 		
