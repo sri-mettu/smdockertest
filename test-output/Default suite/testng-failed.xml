@@ -5,7 +5,7 @@
     <classes>
       <class name="sm.tests.test">
         <methods>
-          <include name="Hwkeye"/>
+          <include name="HwkeyeJobsearch"/>
         </methods>
       </class> <!-- sm.tests.test -->
     </classes>
