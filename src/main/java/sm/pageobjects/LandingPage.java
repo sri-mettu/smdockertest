@@ -38,16 +38,23 @@ public class LandingPage extends AbstractComponent {
 	@FindBy(xpath = "//button[@type='submit']")
 	WebElement cotnue;
 	@FindBy(xpath = "(//p[contains(@class,'MuiTypography-root MuiTypography-p1')])[2]")
-	public WebElement error;
+	WebElement error;
+	@FindBy(xpath ="//p[contains(@class,'MuiTypography-root MuiTypography-p1')]")
+	public
+	//p[contains(@class,'MuiTypography-root MuiTypography-p1')]
+	WebElement pwderr;
 	@FindBy(css = "button[class*='MuiTypography-root ']")
 	WebElement back;
 	@FindBy(xpath = "//p[text()='Password']")
+	public	
 	WebElement pwdbtn;
 	@FindBy(xpath = "//p[text()='Email link']")
 	WebElement emaillink;
 	@FindBy(css = "input[type='password']")
+	public	
 	WebElement password;
 	@FindBy(css = "button[type='submit']")
+	public
 	WebElement submit;
 	@FindBy(xpath = "//button[text()='Forgot password?']")
 	WebElement forgotpwd;
@@ -67,14 +74,21 @@ public class LandingPage extends AbstractComponent {
 	WebElement gpassword;
 	@FindBy(xpath = "(//a[@title='Gmail'])[2]")
 	WebElement gtitle;
-	@FindBy(css = "input[placeholder='Search in emails']")
+	@FindBy(css = "input[placeholder*='Search']")
 	WebElement gsearch;
-	@FindBy(xpath = "//b[text()='Your verification code']")
+	@FindBy(xpath = "(//b[text()='Your verification code'])[1]")
 	WebElement gclick;
 	@FindBy(xpath = "(//table[@role='presentation']/tbody/tr/td/div/p/span)[2]")
 	WebElement gvercode;
+	@FindBy(xpath = "(//div[@aria-label='Delete'])[3]")
+	WebElement gdelete;
+	@FindBy(xpath = "div[class='gb_b gb_x gb_4f gb_K']")
+	WebElement glout;
+	@FindBy(xpath = "(//div[@class='SedFmc'])[2]")
+	WebElement glogout;
 	@FindBy(css = "input[type='password']")
 	WebElement codepwd;
+	
 
 	public void goTo(String url) {
 		driver.get(url);
@@ -125,17 +139,23 @@ public class LandingPage extends AbstractComponent {
 		List<String> windowList = new ArrayList<>(allWindows);
 		// Switch to the new tab (second in the list)
 		driver.switchTo().window(windowList.get(1));	
-		gmailLogin("sri.mettu@multitone.com","Mallik@1983");		
+		gmailLogin("appse@multitone.com","Multitone1");	
+		waitForWebElementToAppear(gsearch);
 		gsearch.sendKeys("Your verification code");
+		waitForWebElementToclick(gclick);
 		gclick.click();
 		String verfcode = gvercode.getText();
 		System.out.println("Your verification code: " + verfcode);
+		//gdelete.click();
 
 		/*
 		 * String regex = "(?i)\\bDatabase\\b"; Pattern pattern =
 		 * Pattern.compile(regex); Matcher matcher = pattern.matcher(copiedtext); String
 		 * matchedword = ""; if (matcher.find()) { matchedword = matcher.group(); }
 		 */
+		//waitForWebElementToclick(glout);
+		//glout.click();
+		//glogout.click();
 		Thread.sleep(3000);
 		driver.switchTo().window(aurora);
 		codepwd.sendKeys(verfcode);
@@ -147,12 +167,15 @@ public class LandingPage extends AbstractComponent {
 	}
 	public void gmailLogin(String email,String gpwd) {
 		driver.get("https://gmail.com/");
-		gsignin.click();
+		if (driver.getCurrentUrl().contains("https://accounts.google.com/v3/signin/identifier?")) {
+		gsignin.click();                             
 		gmail.sendKeys(email);
 		next.click();
 		waitForWebElementToAppear(gpassword);
 		gpassword.sendKeys(gpwd);
-		next.click();
+		next.click();}
+		else if (driver.getCurrentUrl().contains("https://mail.google.com/mail/u/0/#inbox")) {
+		waitForWebElementToAppear(gtitle);}
 		waitForWebElementToAppear(gtitle);
 	}
 
@@ -181,6 +204,7 @@ public class LandingPage extends AbstractComponent {
 		email.sendKeys(un);
 		System.out.println(email.getAttribute("value"));
 		cotnue.click();
+		
 		// getErrorMessage();
 	}
 
