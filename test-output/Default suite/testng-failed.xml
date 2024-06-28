@@ -5,7 +5,9 @@
     <classes>
       <class name="sm.tests.test">
         <methods>
-          <include name="HwkeyeJobsearch"/>
+          <include name="quitBrowser"/>
+          <include name="askTRACK"/>
+          <include name="launchApplication"/>
         </methods>
       </class> <!-- sm.tests.test -->
     </classes>
